@@ -5,12 +5,12 @@ include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
 
 add_executable(run_test
 
-        U00_Repaso/Ej01.cpp
-        U00_Repaso/Ej02.cpp
-        U00_Repaso/Ej03.cpp
-        U00_Repaso/Ej04.cpp
-        U00_Repaso/Ej05.cpp
-        U00_Repaso/Ej06.cpp
+        #U00_Repaso/Ej01.cpp
+        #U00_Repaso/Ej02.cpp
+        #U00_Repaso/Ej03.cpp
+        #U00_Repaso/Ej04.cpp
+        #U00_Repaso/Ej05.cpp
+        #U00_Repaso/Ej06.cpp
 
 
         U01_Recursividad/Ej01.cpp ../U01_Recursividad/Ej-01/potencia.cpp
@@ -77,4 +77,4 @@ if (COVERAGE)
     target_link_libraries(run_test PRIVATE --coverage)
 endif()
 
-target_link_libraries(run_test gtest gtest_main gcov)
+target_link_libraries(run_test gtest gtest_main)
