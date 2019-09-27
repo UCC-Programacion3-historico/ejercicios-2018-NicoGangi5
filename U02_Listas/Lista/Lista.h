@@ -38,6 +38,12 @@ public:
     void reemplazar(int pos, T dato);
 
     void vaciar();
+
+    void moverUlti(int pos);
+
+    void moverPri(T dato);
+
+    void Print();
 };
 
 
@@ -285,5 +291,71 @@ void Lista<T>::vaciar() {
 
 }
 
+template<class T>
+void Lista<T>::moverUlti(int pos) {
+    Nodo<T> *aux = inicio, *aMover;
+    int posActual = 0;
+    while (aux != nullptr && posActual < pos - 1) {
+        aux = aux->getSiguiente();
+        posActual++;
+    }
+
+    if (aux != nullptr) {
+        throw 404;
+    }
+
+    if(pos == 0){
+        aMover = inicio;
+        inicio = inicio->getSiguiente();
+        aux = inicio;
+    }else{
+        aMover = aux->getSiguiente();
+        aux->setSiguiente(aMover->getSiguiente());
+    }
+
+
+    aMover->setSiguiente(nullptr);
+
+    while (aux->getSiguiente() != nullptr) {
+        aux = aux->getSiguiente();
+    }
+
+    aux->setSiguiente(aMover);
+
+
+}
+
+template<class T>
+void Lista<T>::moverPri(T dato){
+    Nodo<T> *aux = inicio, *aMover;
+
+    if (aux == nullptr)                 //Si la lista esta vacia
+        throw 404;
+    if (aux->getDato() == dato)         //Si el dato es el primero
+        return;
+
+    while (aux->getSiguiente() != nullptr && aux->getSiguiente()->getDato() != dato) {
+        aux = aux->getSiguiente();
+    }
+    if (aux->getSiguiente() == nullptr)
+        throw 404;
+
+    aMover = aux->getSiguiente();
+    aux->setSiguiente(aMover->getSiguiente());
+
+    aMover->setSiguiente(inicio);
+    inicio = aMover;
+}
+
+template<class T>
+void Lista<T>::Print(){
+    Nodo<T> *aux = inicio, *aMover;
+
+    while (aux != nullptr){
+        std::cout << aux->getDato() << "-->";
+        aux = aux->getSiguiente();
+    }
+    std::cout << "NULL" << std::endl;
+}
 
 #endif //LISTA_H

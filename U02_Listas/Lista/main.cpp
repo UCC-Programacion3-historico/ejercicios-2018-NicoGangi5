@@ -15,6 +15,13 @@ int main(){
 
     cout << "Hola mingo"<< l.getTamanio() << endl;
 
+    for (int i = 0; i < 20; ++i) {
+        l.insertarPrimero(i);
+    }
+
+    l.Print();
+    l.moverPri(5);
+    l.Print();
 
     return 0;
 }
