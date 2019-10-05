@@ -3,30 +3,20 @@
 [![Build Status](https://travis-ci.org/UCC-Programacion3/04-Colas.svg?branch=master)](https://travis-ci.org/UCC-Programacion3/01-Recursividad)
 
 ## Ejercicio N°1.
-Diseñe un programa que sea capaz de leer dos colas y mediante un mensaje indicar si son 
-iguales. Nota: los elementos constitutivos de las colas son caracteres. 
+Implemente la función sortBubble que recibe un vector y lo ordena mediante el método Burbuja.
 
 
 ##  Ejercicio N°2. 
-Utilizando una pila y una cola, realizar una función que reciba una cadena y devuelva el 
-valor lógico verdadero si dicha cadena es un palidromo. No se deben tener en cuenta los 
-espacios y signos de puntuación.
-
-Ejemplos de palidromo:
-
-* anita lava la tina
-* la ruta natural
-* la ruta nos aporto otro paso natural
+Implemente la función interSort que recibe un vector y lo ordena mediante el algoritmo de ordenamiento por intercalación.
 
 
 ##    Ejercicio N°3. 
-Agregue un método a la clase cola para insertar un nodo según un valor entero de prioridad.
-El valor 0 es la máxima prioridad. Este método debe colocar el nodo lo mas próximo al frente
-de la cola, pero atrás del ultimo nodo con la misma prioridad.
+Implemente la función quickSort que recibe un vector y lo ordena mediante el algoritmo de ordenamiento rápido.
 
 ##    Ejercicio N°4. 
-En un supermercado, se tiene sólo una caja habilitada para que los clientes puedan pagar 
-sus compras. La caja tiene prioridad para mujeres embarazadas. Dada esta situación, se 
-pide que se implemente un sistema que calcule la cantidad de productos comprados por 
-cada cliente y el monto total gastado, también la cantidad de embarazadas que accedieron a
-la cola.
+Implemente la función shellSort que recibe un vector y lo ordena mediante el algoritmo de ordenamiento shell.
+
+##    Ejercicio N°5. 
+La ordenación de tipo burbuja es ineficiente en caso de arreglos grandes. Haga las siguientes modificaciones en el ej1 para mejorar el rendimiento de este tipo de ordenación: a) Después de la primera pasada el número más alto está garantizado que deberá
+aparecer en el elemento numerado más alto del arreglo; después de la segunda pasada, los dos números más altos estarán en su lugar, y así en lo sucesivo.
+b) Los datos en el arreglo pudieran ya estar en orden casi apropiado. Modifique la ordenación para verificar si se han hecho intercambios. Si no se han hecho intercambios, entonces los datos ya deberían estar en el orden apropiado y, por lo tanto, el programa debe darse por terminado. Si ha habido intercambio, entonces por lo menos se requiere una pasada adicional.

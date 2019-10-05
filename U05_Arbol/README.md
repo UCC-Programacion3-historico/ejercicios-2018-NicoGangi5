@@ -3,30 +3,20 @@
 [![Build Status](https://travis-ci.org/UCC-Programacion3/04-Colas.svg?branch=master)](https://travis-ci.org/UCC-Programacion3/01-Recursividad)
 
 ## Ejercicio N°1.
-Diseñe un programa que sea capaz de leer dos colas y mediante un mensaje indicar si son 
-iguales. Nota: los elementos constitutivos de las colas son caracteres. 
+Diseñar una aplicación que permita:
+Cargar en un array 30 números generados aleatoriamente entre 100 y 500. Imprimir los números.
+Crear un árbol binario de búsqueda con los datos del array. 
 
 
 ##  Ejercicio N°2. 
-Utilizando una pila y una cola, realizar una función que reciba una cadena y devuelva el 
-valor lógico verdadero si dicha cadena es un palidromo. No se deben tener en cuenta los 
-espacios y signos de puntuación.
-
-Ejemplos de palidromo:
-
-* anita lava la tina
-* la ruta natural
-* la ruta nos aporto otro paso natural
+Reconstruir un árbol binario a partir de los recorridos siguientes: Preorden: 2, 5, 3, 9, 7, 1, 6, 4, 8.
+Inorden: 9, 3, 7, 5, 1, 2, 6, 8, 4.
+Inorden: 5, 6, 12, 10, 1, 9, 13, 4, 8, 2, 7, 3, 11.
+Postorden: 6, 5, 10, 9, 1, 13, 12, 2, 8, 3, 11, 7, 4.
 
 
 ##    Ejercicio N°3. 
-Agregue un método a la clase cola para insertar un nodo según un valor entero de prioridad.
-El valor 0 es la máxima prioridad. Este método debe colocar el nodo lo mas próximo al frente
-de la cola, pero atrás del ultimo nodo con la misma prioridad.
+Implementar el método contarPorNivel que devuelve el número de nódos del nivel iésimo de un árbol binario.
 
 ##    Ejercicio N°4. 
-En un supermercado, se tiene sólo una caja habilitada para que los clientes puedan pagar 
-sus compras. La caja tiene prioridad para mujeres embarazadas. Dada esta situación, se 
-pide que se implemente un sistema que calcule la cantidad de productos comprados por 
-cada cliente y el monto total gastado, también la cantidad de embarazadas que accedieron a
-la cola.
+Especificar la operación espejo que devuelve la imagen especular de un árbol binario.
