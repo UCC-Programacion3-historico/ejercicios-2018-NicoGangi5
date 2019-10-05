@@ -11,12 +11,10 @@ template <class T>
 void fnInvierte (Lista<T> *lis){
     int aux = 0;
 
-    if (lis->esVacia()) return throw 404;
-
     for (int i = 0; i < lis->getTamanio(); ++i) {
-        aux = lis->getDato(0);
-        lis->insertar(lis->getTamanio() - i, aux);
-        lis->remover(0);
+        aux = lis->getDato(lis->getTamanio()-1);
+        lis->insertar(i, aux);
+        lis->remover(lis->getTamanio()-1);
     }
 }
 

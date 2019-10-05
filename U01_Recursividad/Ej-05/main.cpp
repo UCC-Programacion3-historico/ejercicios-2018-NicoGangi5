@@ -3,8 +3,8 @@
 
 using namespace std;
 
-unsigned int a = 7;
-unsigned int b = 2;
+unsigned int a = 11;
+unsigned int b = 3;
 unsigned int num = 5342;
 
 int main() {

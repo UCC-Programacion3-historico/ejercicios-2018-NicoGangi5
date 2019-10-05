@@ -7,20 +7,14 @@ using namespace std;
 int main() {
     std::cout << "Ejercicio 02/01\n" << std::endl;
 
-    Lista<int> *lista;
-    lista = new Lista<int>();
-    for(int i = 15; i < 25; i++){
-        lista->insertarUltimo(i);
+    Lista<int> *List;
+    for (int i = 0; i < 15; ++i) {
+        List->insertarUltimo(i);
     }
-    for (int i = 0; i < lista->getTamanio(); i++) {
-        std::cout << " " << lista->getDato(i);
-    }
-    std::cout << std::endl;
 
-    fnInvierte(lista);
-    for (int i = 0; i < lista->getTamanio(); i++) {
-        std::cout << " " << lista->getDato(i);
-    }
-    std::cout << std::endl;
-    return 0;
+    List->Print();
+
+    fnInvierte(List);
+
+    List->Print();
 }
